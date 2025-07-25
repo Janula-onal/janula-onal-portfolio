@@ -1,0 +1,500 @@
+/* Reset & base styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #121212;
+  color: #e0e0e0;
+  line-height: 1.6;
+  scroll-behavior: smooth;
+}
+
+/* Container to center content and add padding */
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+/* === Developer-Themed Navbar === */
+.dev-navbar {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background: rgba(18, 18, 18, 0.8); /* translucent for code scene */
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0, 255, 128, 0.2);
+}
+
+.nav-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1rem;
+}
+
+.nav-logo {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #4caf50;
+  text-decoration: none;
+  letter-spacing: 1px;
+  text-shadow: 0 0 10px #4caf50;
+}
+
+.nav-menu {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-menu a {
+  color: #ddd;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+  position: relative;
+}
+
+.nav-menu a:hover {
+  color: #4caf50;
+  text-shadow: 0 0 6px #4caf50;
+}
+
+@media (max-width: 768px) {
+  .nav-menu {
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 10px;
+    background: rgba(0, 0, 0, 0.95);
+    padding: 1rem;
+    border-radius: 8px;
+    display: none;
+  }
+
+  .nav-menu.active {
+    display: flex;
+  }
+
+  .nav-toggle {
+    display: block;
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: #4caf50;
+  }
+}
+
+/* Show nav-toggle icon only on small screens */
+.nav-toggle {
+  display: none;
+  font-size: 2rem;
+  color: #4caf50;
+  cursor: pointer;
+}
+
+/* Responsive styles for nav menu */
+@media (max-width: 768px) {
+  .nav-toggle {
+    display: block;
+  }
+
+  .nav-menu {
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    background-color: rgba(18, 18, 18, 0.95);
+    padding: 1rem;
+    border-radius: 8px;
+    display: none;
+    box-shadow: 0 0 10px rgba(0, 255, 128, 0.2);
+  }
+
+  .nav-menu.active {
+    display: flex;
+  }
+
+  .nav-menu li {
+    margin: 0.5rem 0;
+  }
+}
+
+
+/* Logo styles */
+.logo {
+  font-weight: 700;
+  font-size: 1.8rem;
+  padding: 1rem 0;
+  color: #4caf50;
+  text-decoration: none;
+}
+
+/* Navigation links */
+.nav-links {
+  list-style: none;
+  display: flex;
+}
+
+.nav-links li {
+  margin-left: 1.5rem;
+}
+
+.nav-links a {
+  color: #ccc;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #4caf50;
+}
+
+/* Hero Section */
+.hero-section {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4rem 1rem 6rem 1rem;
+  gap: 2rem;
+}
+
+.hero-text {
+  flex: 1 1 400px;
+}
+
+.hero-text h1 {
+  font-size: 2.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.hero-text h1 span {
+  color: #4caf50;
+}
+
+.hero-text p {
+  font-size: 1.3rem;
+  margin-bottom: 1.5rem;
+  color: #bbb;
+}
+
+.btn-primary {
+  background-color: #4caf50;
+  color: white;
+  padding: 0.9rem 2rem;
+  border: none;
+  border-radius: 40px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-decoration: none;
+}
+
+.btn-primary:hover {
+  background-color: #3a9e3a;
+}
+
+.hero-image {
+  flex: 1 1 300px;
+  text-align: center;
+}
+
+/* Section Titles */
+.section h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  border-bottom: 3px solid #4caf50;
+  padding-bottom: 0.3rem;
+  max-width: max-content;
+}
+
+/* About Section */
+.about-section p {
+  font-size: 1.1rem;
+  color: #ccc;
+  margin-bottom: 1rem;
+}
+
+/* Projects Grid */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+  gap: 2rem;
+}
+
+/* Individual project cards */
+.project-card {
+  background-color: #1f1f1f;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 12px rgba(0,0,0,0.5);
+  display: flex;
+  flex-direction: column;
+}
+
+.project-card img {
+  width: 100%;
+  object-fit: cover;
+  height: 160px;
+}
+
+.project-info {
+  padding: 1rem;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.project-info h3 {
+  margin-bottom: 0.5rem;
+  color: #4caf50;
+}
+
+.project-info p {
+  flex-grow: 1;
+  color: #bbb;
+  margin-bottom: 1rem;
+}
+
+/* Secondary buttons (project links) */
+.btn-secondary {
+  align-self: flex-start;
+  background-color: transparent;
+  border: 2px solid #4caf50;
+  color: #4caf50;
+  padding: 0.5rem 1.2rem;
+  border-radius: 40px;
+  cursor: pointer;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-secondary:hover {
+  background-color: #4caf50;
+  color: #121212;
+}
+
+/* Skills Section */
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: space-between;
+}
+
+/* Individual skill block */
+.skill {
+  flex: 1 1 45%;
+  background-color: #1f1f1f;
+  border-radius: 10px;
+  padding: 1rem;
+}
+
+.skill h4 {
+  margin-bottom: 0.5rem;
+  color: #4caf50;
+}
+
+/* Skill progress bar background */
+.skill-bar {
+  background-color: #333;
+  border-radius: 40px;
+  height: 14px;
+  overflow: hidden;
+}
+
+/* Skill progress bar fill */
+.skill-level {
+  height: 14px;
+  background-color: #4caf50;
+  border-radius: 40px;
+  transition: width 1s ease-in-out;
+}
+
+/* Contact Section */
+.contact-section p {
+  margin-bottom: 1rem;
+  color: #ccc;
+}
+
+/* Contact form styles */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 0.7rem 1rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  resize: vertical;
+}
+
+.contact-form textarea {
+  min-height: 100px;
+}
+
+.contact-form button {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 0.9rem 2rem;
+  border-radius: 40px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: #3a9e3a;
+}
+
+/* Contact info links (email and whatsapp) */
+.contact-info a {
+  color: #4caf50;
+  text-decoration: none;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 1.5rem 1rem;
+  color: #666;
+  font-size: 0.9rem;
+  border-top: 1px solid #333;
+  margin-top: 3rem;
+  position: relative;
+}
+
+/* WhatsApp floating button in footer */
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  background-color: #25D366;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  z-index: 1000;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.whatsapp-float:hover {
+  background-color: #1ebe57;
+}
+
+/* Remove SVG styling because we use img now */
+.whatsapp-float svg {
+  display: none;
+}
+
+/* WhatsApp image icon inside button */
+.whatsapp-float img {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+  pointer-events: none; /* Prevent image from interfering with button clicks */
+}
+
+/* slideshow of designs*/
+.slideshow-container {
+  position: relative;
+  width: 100%;
+  height: 160px; /* same as other images */
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.slideshow-container img.slide {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 160px;
+  object-fit: contain;  /* prevents cropping */
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  border-radius: 10px;
+}
+
+.slideshow-container img.slide.active {
+  opacity: 1;
+  position: relative; /* to keep in flow */
+}
+
+.linkedin-float {
+  position: fixed;
+  bottom: 90px; /* adjust if needed to stack above WhatsApp */
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  background-color: #0077b5;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  z-index: 1000;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+
+.linkedin-float:hover {
+  background-color: #005f93;
+}
+
+.back-btn-container {
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0;
+}
+
+.btn-back {
+  padding: 0.6rem 1.4rem;
+  background-color: transparent;
+  color: #4caf50;
+  border: 2px solid #4caf50;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.btn-back:hover {
+  background-color: #4caf50;
+  color: #121212;
+}
+
+/* 3D animation */
+#code-scene {
+  position: fixed;
+  opacity: 0.5; /* makes the entire canvas semi-transparent */
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  background: #0d0d0d;
+}

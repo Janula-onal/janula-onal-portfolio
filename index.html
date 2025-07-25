@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Janula | Software Engineer & Graphic Designer Portfolio</title>
+  <link rel="icon" type="image/png" href="12.png" />
+
+  <!--google verification (dont delete it ) -->
+  <meta name="google-site-verification" content="CfthYglmZG4NQwadxzwluKcDRrU9CNslsWaP9fbABk4" />
+
+  <!-- Meta SEO & Social Sharing -->
+  <meta name="description" content="I'm Janula, an aspiring software engineer and graphic designer from Sri Lanka. Explore my portfolio to see my web development and creative design projects." />
+  <meta name="keywords" content="Janula, Software Engineer, Graphic Designer, Portfolio, Web Developer, Sri Lanka, HTML, CSS, JavaScript, Photoshop, Illustrator, Figma" />
+  <meta name="author" content="Janula Onal" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Open Graph for better social sharing -->
+  <meta property="og:title" content="Janula | Software Engineer & Graphic Designer" />
+  <meta property="og:description" content="Creative portfolio of Janula - combining software engineering and design to deliver modern digital experiences." />
+  <meta property="og:type" content="website" />
+
+  <!---YOU MUST CHANGE URLS IN THESE
+  Replace https://your-portfolio.netlify.app/ with your actual Netlify URL.
+
+  Replace the og:image and twitter:image with a real image link that represents your portfolio
+   (optional but recommended). You can upload a preview.jpg in your assets/ folder and link it like:-->
+  <meta property="og:url" content="https://your-portfolio.netlify.app/" />
+  <meta property="og:image" content="https://your-portfolio.netlify.app/assets/preview.jpg" />
+
+  <!-- Twitter Card (optional) -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Janula | Software Engineer & Graphic Designer" />
+  <meta name="twitter:description" content="Explore my portfolio to see web apps and graphic designs built with passion." />
+  <meta name="twitter:image" content="https://your-portfolio.netlify.app/assets/preview.jpg" />
+
+  <!-- Google Fonts Montserrat -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
+
+  <!-- GSAP + ScrollTrigger -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+
+  <!-- Link to external CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Coding Scene Background -->
+<canvas id="code-scene"></canvas>
+
+<!-- Script -->
+<script src="https://cdn.jsdelivr.net/npm/three@0.150.1/build/three.min.js"></script>
+<script src="code-scene.js"></script>
+
+  <!-- Navigation Bar -->
+  <nav class="dev-navbar">
+  <div class="nav-content container">
+    <a href="#home" class="nav-logo">Janula</a>
+
+    <!-- Toggle Icon (☰) -->
+    <div class="nav-toggle" id="navToggle">&#9776;</div>
+
+    <!-- Navigation Menu -->
+    <ul class="nav-menu" id="navMenu">
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+  <!-- Hero Section - Introduction -->
+  <header id="home" class="hero-section">
+    <div class="container hero-container">
+      <div class="hero-text">
+        <h1>Hello, I'm <span>Janula</span></h1>
+        <p>Aspiring Software Engineer & Graphic Designer | Web Developer | Problem Solver</p>
+        <a href="#projects" class="btn-primary">View My Work</a>
+      </div>
+      <div class="hero-image">
+        <!-- No photo as requested -->
+      </div>
+    </div>
+  </header>
+
+  <!-- About Me Section -->
+  <section id="about" class="section about-section">
+    <div class="container">
+      <h2>About Me</h2>
+      <p>
+        I’m Janula, an 18-year-old aspiring software engineer, digital marketer, and creative designer from Sri Lanka. 
+        I’m currently studying for a Bachelor of Computer Science (majoring in Software Engineering) at Edith Cowan University (ECU) Sri Lanka campus.
+        I enjoy combining logic and creativity—whether I’m building clean, responsive websites or designing standout visuals and ad creatives.
+      </p>
+      <p>
+      I have hands-on experience in front-end web development (HTML, CSS, JavaScript), graphic design (Photoshop, Illustrator), and digital marketing. I’ve successfully run Facebook advertising campaigns for my father’s clothing store—managing the strategy, design, and targeting to boost engagement and reach more customers.
+      </p>
+      <p>
+        I’m passionate about crafting meaningful digital experiences that connect design, technology, and marketing.
+      </p>
+      <a href="CV.pdf" download class="btn-secondary">Download My CV</a>
+      <a href="CV.pdf" target="_blank" class="btn-secondary">View My CV</a>
+
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="section projects-section">
+    <div class="container">
+      <h2>Projects</h2>
+      <div class="projects-grid">
+
+        <!-- Software projects -->
+        <div class="project-card">
+          <img src="Screenshot 2025-07-11 095214.png" alt="Software projects" />
+          <div class="project-info">
+            <h3>Software projects</h3>
+            <p>Showcasing my web apps built with HTML, CSS, JavaScript.</p>
+            <a href="software-projects.html" target="_blank" rel="noopener" class="btn-secondary">Explore Works</a>
+          </div>
+        </div>
+
+        <!-- Graphic Design projects ( information design ) -->
+        <div class="project-card slideshow-card">
+          <div class="slideshow-container">
+            <img class="design-slide" src="1.png" alt="Design 1" />
+            <img class="design-slide" src="3.png" alt="Design 2" />
+            <img class="design-slide" src="4.png" alt="Design 3" />
+            <img class="design-slide" src="5.png" alt="Design 4" />
+            <img class="design-slide" src="6.png" alt="Design 5" />
+          </div>
+          <div class="project-info">
+            <h3>Graphic designs</h3>
+            <p>Designed engaging social media posts / infographic designs and banners for marketing campaigns.</p>
+            <a href="design-gallery1.html" class="btn-secondary" target="_blank">Explore Works</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="section skills-section">
+    <div class="container">
+      <h2>Skills</h2>
+      <div class="skills-list">
+
+        <!-- Development Skills -->
+        <div class="skill">
+          <h4>HTML & CSS</h4>
+          <div class="skill-bar"><div class="skill-level" style="width: 85%;"></div></div>
+        </div>
+        <div class="skill">
+          <h4>JavaScript</h4>
+          <div class="skill-bar"><div class="skill-level" style="width: 70%;"></div></div>
+        </div>
+        <div class="skill">
+          <h4>React (learning)</h4>
+          <div class="skill-bar"><div class="skill-level" style="width: 40%;"></div></div>
+        </div>
+        <div class="skill">
+          <h4>Git & GitHub</h4>
+          <div class="skill-bar"><div class="skill-level" style="width: 60%;"></div></div>
+        </div>
+
+        <!-- Graphic Design Skills -->
+        <div class="skill">
+          <h4>Adobe Photoshop</h4>
+          <div class="skill-bar"><div class="skill-level" style="width: 80%;"></div></div>
+        </div>
+        <div class="skill">
+          <h4>Adobe Illustrator</h4>
+          <div class="skill-bar"><div class="skill-level" style="width: 75%;"></div></div>
+        </div>
+        <div class="skill">
+          <h4>Digital marketing</h4>
+          <div class="skill-bar"><div class="skill-level" style="width: 60%;"></div></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="section contact-section">
+    <div class="container">
+      <h2>Contact Me</h2>
+      <p>Interested in working together? Reach out!</p>
+
+      <!-- Contact Form (not functional, just UI) -->
+<form name="contact" method="POST" data-netlify="true" class="contact-form">
+  <input type="hidden" name="form-name" value="contact" />
+  <input type="text" name="name" placeholder="Your Name" required />
+  <input type="email" name="email" placeholder="Your Email" required />
+  <textarea name="message" placeholder="Your Message" required></textarea>
+  <button type="submit">Send Message</button>
+</form>
+
+
+      <!-- Email Link -->
+      <p class="contact-info">
+        Or email me directly at
+        <a href="mailto:janulaonal25@gmail.com">janulaonal25@gmail.com</a>
+      </p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>© 2025 Janula. All rights reserved.</p>
+      <!-- WhatsApp Floating Button -->
+      <a href="https://wa.me/94761163401" target="_blank" rel="noopener" class="whatsapp-float" aria-label="Chat on WhatsApp">
+        <img src="wp.png" alt="WhatsApp Icon" width="40" height="40" />
+      </a>
+      <a href="https://www.linkedin.com/in/janula-onal/" target="_blank" rel="noopener" class="linkedin-float" aria-label="Connect on LinkedIn">
+        <img src="in.png" alt="Linkedin Icon" width="40" height="40" />
+</a>
+    </div>
+  </footer>
+
+  <!-- Link to external JS -->
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Software Projects | Janula Portfolio</title>
+  <link rel="icon" href="12.png" type="image/png" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background-color: #121212;
+      color: #e0e0e0;
+      line-height: 1.6;
+      scroll-behavior: smooth;
+    }
+
+    canvas#code-scene {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      z-index: -1;
+      opacity: 0.5;
+      background: #0d0d0d;
+    }
+
+    .navbar {
+      background-color: rgba(18, 18, 18, 0.95);
+      backdrop-filter: blur(10px);
+      padding: 1rem 0;
+      border-bottom: 1px solid #2a2a2a;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .nav-container {
+      max-width: 1000px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 1rem;
+    }
+
+    .logo {
+      font-size: 1.6rem;
+      font-weight: bold;
+      color: #4caf50;
+      text-decoration: none;
+      text-shadow: 0 0 8px #4caf50;
+    }
+
+    .section {
+      padding: 2rem 1rem;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      border-bottom: 3px solid #4caf50;
+      display: inline-block;
+      padding-bottom: 0.3rem;
+    }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .project-card {
+      background-color: #1f1f1f;
+      border-radius: 10px;
+      box-shadow: 0 0 12px rgba(76, 175, 80, 0.2);
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      height: 420px;
+      min-height: 420px;
+      will-change: transform;
+    }
+
+    .project-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0 18px rgba(76, 175, 80, 0.6);
+    }
+
+    .project-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      flex-shrink: 0;
+    }
+
+    .project-info {
+      padding: 1rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      flex-grow: 1;
+    }
+
+    .project-info h3 {
+      font-size: 1rem;
+      color: #4caf50;
+      margin-bottom: 0.5rem;
+      line-height: 1.3;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .project-info p {
+      font-size: 0.88rem;
+      color: #bbb;
+      margin-bottom: 1rem;
+      line-height: 1.4;
+      overflow: hidden;
+      display: -webkit-box;
+
+    }
+
+    .btn-secondary {
+      display: inline-block;
+      padding: 0.5rem 1.2rem;
+      background-color: transparent;
+      color: #4caf50;
+      border: 2px solid #4caf50;
+      border-radius: 30px;
+      font-weight: 600;
+      text-decoration: none;
+      text-align: center;
+      transition: all 0.3s ease;
+    }
+
+    .btn-secondary:hover {
+      background-color: #4caf50;
+      color: #121212;
+    }
+
+    .back-btn-container {
+      text-align: center;
+      margin-top: 3rem;
+    }
+
+    .btn-back {
+      padding: 0.6rem 1.4rem;
+      background-color: transparent;
+      color: #4caf50;
+      border: 2px solid #4caf50;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    .btn-back:hover {
+      background-color: #4caf50;
+      color: #121212;
+    }
+
+    .footer {
+      text-align: center;
+      padding: 1.5rem;
+      color: #666;
+      font-size: 0.9rem;
+      border-top: 1px solid #333;
+      margin-top: 3rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Matrix Background -->
+  <canvas id="code-scene"></canvas>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="logo">Janula Onal</a>
+    </div>
+  </nav>
+
+  <!-- Section -->
+  <section class="section">
+    <div class="container">
+      <h2>Software Projects</h2>
+      <div class="projects-grid">
+
+        <div class="project-card">
+          <img src="portfolio.png" alt="My Portfolio Website" />
+          <div class="project-info">
+            <h3>My Portfolio Website</h3>
+            <p>Portfolio website that include everything that I have done. Built with JavaScript and localStorage.</p>
+            <a href="https://janulaonalportfolio.netlify.app/" target="_blank" class="btn-secondary" rel="noopener noreferrer">Live Demo</a>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <img src="Screenshot 2025-07-11 095214.png" alt="Coverly | Cover Letter Generator" />
+          <div class="project-info">
+            <h3>Coverly | Cover Letter Generator</h3>
+            <p>Cover letter generator for job seekers. Built with HTML, CSS, JavaScript and localStorage.</p>
+            <a href="https://coverly1.netlify.app/" target="_blank" class="btn-secondary" rel="noopener noreferrer">Live Demo</a>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <img src="onal.png" alt="onal advertising" />
+          <div class="project-info">
+            <h3>Onal advertising - My advertising agency</h3>
+            <p>the website that i desing for my own advertising agency. that i built using JavaScript, htmal and css.</p>
+            <a href="https://onaladvertising.netlify.app/" target="_blank" class="btn-secondary" rel="noopener noreferrer">Live Demo</a>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <img src="password manager.png" alt="PassVault - Password Manager" />
+          <div class="project-info">
+            <h3>PassVault - Password Manager</h3>
+            <p>Secure password manager with save and copy features. Built with JavaScript and localStorage.</p>
+            <a href="https://passvult.netlify.app/" target="_blank" class="btn-secondary" rel="noopener noreferrer">Live Demo</a>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <img src="pass.png" alt="PassCraft Password Generator" />
+          <div class="project-info">
+            <h3>PassCraft - Password Generator</h3>
+            <p>Secure password generator with save and copy features. Built with JavaScript and localStorage.</p>
+            <a href="https://68623425966d03b6fd38adbc--gorgeous-cocada-a6d9af.netlify.app/" target="_blank" class="btn-secondary" rel="noopener noreferrer">Live Demo</a>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <img src="Vehicle Repair And Modification Service center.png" alt="Vehicle Repair And Modification Service center" />
+          <div class="project-info">
+            <h3>Vehicle Repair And Modification Service center</h3>
+            <p>Modern, minimal website for aVehicle Repair And Modification Service center. Built wix for a univesity project.</p>
+            <a href="https://74004076.wixsite.com/my-site-1" target="_blank" class="btn-secondary" rel="noopener noreferrer">Live Demo</a>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <img src="Historic City of Sucre.png" alt="Auto Repair Shop Website" />
+          <div class="project-info">
+            <h3>Historic City of Sucre</h3>
+            <p>A webpage that says about Historic City of Sucre that i created for a university project.</p>
+            <a href="https://74004076.wixsite.com/my-site-2" target="_blank" class="btn-secondary" rel="noopener noreferrer">Live Demo</a>
+          </div>
+        </div>
+
+                <div class="project-card">
+          <img src="dental 1.png" alt="Auto Repair Shop Website" />
+          <div class="project-info">
+            <h3>BrightSmile Clinic</h3>
+            <p>Modern, minimal website for an dental clinic that i created. Built with HTML, CSS, and JavaScript.</p>
+            <a href="https://frolicking-lebkuchen-0162f2.netlify.app/" target="_blank" class="btn-secondary" rel="noopener noreferrer">Live Demo</a>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <img src="car.png" alt="Auto Repair Shop Website" />
+          <div class="project-info">
+            <h3>Auto Repair Shop</h3>
+            <p>Modern, minimal website for an auto repair business. Built with HTML, CSS, and JavaScript.</p>
+            <a href="https://68623630fbe20eb948090a43--dynamic-seahorse-bff9ea.netlify.app/" target="_blank" class="btn-secondary" rel="noopener noreferrer">Live Demo</a>
+          </div>
+        </div>
+
+
+      </div>
+
+      <div class="back-btn-container">
+        <a href="index.html" class="btn-back">← Back to Portfolio</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>© 2025 Janula. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- GSAP & Matrix Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script>
+    // Matrix Background
+    const canvas = document.getElementById('code-scene');
+    const ctx = canvas.getContext('2d');
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+
+    const chars = '01';
+    const fontSize = 16;
+    const columns = canvas.width / fontSize;
+    const drops = Array(Math.floor(columns)).fill(1);
+
+    function drawMatrix() {
+      ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+      ctx.fillStyle = '#4caf50';
+      ctx.font = fontSize + 'px monospace';
+
+      for (let i = 0; i < drops.length; i++) {
+        const text = chars[Math.floor(Math.random() * chars.length)];
+        ctx.fillText(text, i * fontSize, drops[i] * fontSize);
+        if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
+          drops[i] = 0;
+        }
+        drops[i]++;
+      }
+    }
+
+    setInterval(drawMatrix, 33);
+
+    window.addEventListener('resize', () => {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    });
+
+    // GSAP scroll animations - no y movement, only fade + scale
+    gsap.registerPlugin(ScrollTrigger);
+    gsap.from(".project-card", {
+      scrollTrigger: {
+        trigger: ".projects-grid",
+        start: "top 80%",
+      },
+      opacity: 0,
+      stagger: 0.2,
+      duration: 1,
+      ease: "power2.out"
+    });
+
+    gsap.from(".btn-back", {
+      scrollTrigger: {
+        trigger: ".btn-back",
+        start: "top 90%",
+      },
+      opacity: 0,
+      y: 20,
+      duration: 0.6,
+      ease: "power2.out"
+    });
+  </script>
+</body>
+</html>
